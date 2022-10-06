@@ -1,0 +1,25 @@
+{
+  "name": "pg-configurator",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Oliver Turner",
+  "license": "ISC",
+  "workspaces": [
+    "site"
+  ],
+  "devDependencies": {
+    "@architect/architect": "10.7.0"
+  },
+  "dependencies": {
+    "@architect/functions": "5.2.2",
+    "@begin/data": "4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:api": "npx arc sandbox",
+    "start:site": "npm run start -w site",
+    "build:site": "npm run build -w site",
+    "deploy": "npx arc deploy"
+  }
+}
