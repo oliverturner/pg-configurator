@@ -5,6 +5,9 @@
   "keywords": [],
   "author": "Oliver Turner",
   "license": "ISC",
+  "volta": {
+    "node": "18.10.0"
+  },
   "workspaces": [
     "app"
   ],
