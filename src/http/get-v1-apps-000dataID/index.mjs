@@ -4,11 +4,11 @@ const scopeID = "2c27fe83-1e6f-4415-9333-2dc60f0e0bed";
 const regExp = new RegExp(/^[a-zA-Z0-9-]{36}$/);
 
 function validateParams({ dataID }) {
-  return dataID.match(regExp);
+  return dataID.match(regExp) ? dataID : false;
 }
 
 async function getTable(request) {
-  const { dataID } = validateParams(request.params);
+  const dataID = validateParams(request.params);
 
   if (dataID === false) {
     throw new Error("Invalid dataID");
