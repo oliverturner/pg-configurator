@@ -1,0 +1,169 @@
+{
+  "page": {
+    "lazyLoad": {
+      "fetchMarginPercent": 500,
+      "renderMarginPercent": 200,
+      "mobileScaling": 2
+    },
+    "requestMode": "sra"
+  },
+  "slots": {
+    "leaderboard": {
+      "targeting": {
+        "pos": "top"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [
+        [
+          [1200, 800],
+          [
+            [970, 250],
+            [970, 90],
+            [970, 66],
+            [728, 90],
+            [2, 2],
+            [1, 1]
+          ]
+        ],
+        [
+          [1024, 768],
+          [
+            [970, 90],
+            [970, 66],
+            [728, 90],
+            [2, 2],
+            [1, 1]
+          ]
+        ],
+        [
+          [768, 690],
+          [
+            [728, 90],
+            [2, 2],
+            [1, 1]
+          ]
+        ],
+        [[0, 0], [[300, 250]]]
+      ]
+    },
+    "mpu": {
+      "targeting": {
+        "pos": "mid"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [
+        [[1024, 768], [[]]],
+        [
+          [768, 690],
+          [
+            [728, 90],
+            [2, 2],
+            [1, 1]
+          ]
+        ],
+        [
+          [0, 0],
+          [
+            [300, 250],
+            [2, 2],
+            [1, 1]
+          ]
+        ]
+      ]
+    },
+    "mpu1": {
+      "targeting": {
+        "pos": "mid1"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [
+        [[1024, 768], [[]]],
+        [
+          [768, 690],
+          [
+            [728, 90],
+            [2, 2],
+            [1, 1]
+          ]
+        ],
+        [
+          [0, 0],
+          [
+            [300, 250],
+            [2, 2],
+            [1, 1]
+          ]
+        ]
+      ]
+    },
+    "mpu3": {
+      "targeting": {
+        "pos": "mid3"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [
+        [[768, 690], [[]]],
+        [
+          [0, 0],
+          [
+            [300, 250],
+            [2, 2],
+            [1, 1]
+          ]
+        ]
+      ]
+    },
+    "third-mpu": {
+      "targeting": {
+        "pos": "mid2"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [
+        [[1024, 768], [[]]],
+        [
+          [0, 0],
+          [
+            [300, 250],
+            [2, 2],
+            [1, 1]
+          ]
+        ]
+      ]
+    },
+    "native-ad__fullwidth": {
+      "targeting": {
+        "pos": "native",
+        "format": "stacked",
+        "appname": "article"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [[[0, 0], ["fluid"]]]
+    },
+    "native_onward_journey": {
+      "targeting": {
+        "pos": "native",
+        "format": "stacked",
+        "appname": "article"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [[[0, 0], ["fluid"]]]
+    },
+    "right-hand-rail": {
+      "targeting": {
+        "pos": "mid"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [
+        [
+          [1024, 768],
+          [
+            [300, 600],
+            [300, 250],
+            [2, 2],
+            [1, 1]
+          ]
+        ]
+      ]
+    }
+  }
+}

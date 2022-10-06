@@ -1,0 +1,142 @@
+{
+  "page": {
+    "lazyLoad": {
+      "fetchMarginPercent": 500,
+      "renderMarginPercent": 200,
+      "mobileScaling": 2
+    },
+    "requestMode": "sra"
+  },
+  "slots": {
+    "top-desktop": {
+      "targeting": {
+        "pos": "top"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [
+        [[1200, 800], [[970, 250]]],
+        [
+          [1024, 768],
+          [
+            [970, 90],
+            [970, 66]
+          ]
+        ],
+        [
+          [768, 690],
+          [
+            [1, 1],
+            [2, 2],
+            [728, 90]
+          ]
+        ]
+      ]
+    },
+    "high-impact": {
+      "targeting": {
+        "pos": "high-impact",
+        "mvt2": "true"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [
+        [
+          [1024, 768],
+          [
+            [970, 90],
+            [970, 66]
+          ]
+        ],
+        [[768, 690], [[728, 90]]],
+        [
+          [320, 50],
+          [
+            [1, 1],
+            [2, 2],
+            [300, 250]
+          ]
+        ]
+      ]
+    },
+    "mid-desktop": {
+      "targeting": {
+        "pos": "mid"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [
+        [
+          [1024, 768],
+          [
+            [970, 90],
+            [970, 66]
+          ]
+        ],
+        [
+          [768, 690],
+          [
+            [1, 1],
+            [2, 2],
+            [728, 90]
+          ]
+        ]
+      ]
+    },
+    "top-mobile": {
+      "targeting": {
+        "pos": "top"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [
+        [[768, 690], []],
+        [
+          [320, 50],
+          [
+            [1, 1],
+            [2, 2],
+            [300, 250]
+          ]
+        ]
+      ]
+    },
+    "mid-mobile": {
+      "targeting": {
+        "pos": "mid"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [
+        [[768, 690], []],
+        [
+          [320, 50],
+          [
+            [1, 1],
+            [2, 2],
+            [300, 250]
+          ]
+        ]
+      ]
+    },
+    "mid1": {
+      "targeting": {
+        "pos": "mid1"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [
+        [
+          [320, 50],
+          [
+            [300, 250],
+            [2, 2]
+          ]
+        ]
+      ]
+    },
+    "native-teaser": {
+      "targeting": {
+        "pos": "PartnerContent",
+        "format": "stacked",
+        "layout": "card"
+      },
+      "adunit": "/5887/test.5887.origami",
+      "sizes": [[[0, 0], ["fluid"]]]
+    }
+  }
+}

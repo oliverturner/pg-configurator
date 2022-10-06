@@ -6,8 +6,8 @@ dist
 spa false
 
 @http
-get /v1/things
-get /v1/things/:id
+get /v1/apps
+get /v1/apps/:dataID
 
 @tables
 data
