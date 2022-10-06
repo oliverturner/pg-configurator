@@ -1,13 +1,14 @@
 import arc from "@architect/functions";
 
 async function getTable() {
-  let tables = await arc.tables();
-  let table = await tables.data.scan({});
+  const { data } = await arc.tables();
+  const { Items } = await data.scan({
+    AttributesToGet: ["label", "dataID"],
+  });
 
   return {
-    ok: true,
     cors: true,
-    json: table.Items,
+    json: Items,
   };
 }
 
