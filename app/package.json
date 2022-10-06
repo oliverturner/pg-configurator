@@ -1,0 +1,34 @@
+{
+  "name": "configurator",
+  "version": "0.0.1",
+  "type": "module",
+  "devDependencies": {
+    "@sveltejs/adapter-static": "next",
+    "@sveltejs/kit": "next",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "open-props": "1.4.16",
+    "postcss": "^8.4.17",
+    "postcss-jit-props": "1.0.7",
+    "postcss-load-config": "^4.0.1",
+    "postcss-preset-env": "7.8.2",
+    "prettier-plugin-svelte": "^2.7.1",
+    "svelte": "^3.50.1",
+    "svelte-check": "^2.9.1",
+    "svelte-preprocess": "^4.10.7",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.6"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite dev",
+    "package": "svelte-kit package",
+    "preview": "vite preview",
+    "check:svelte:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "check:svelte": "svelte-check --tsconfig ./tsconfig.json",
+    "check:types": "tsc --noEmit",
+    "check:e2e": "npm t",
+    "check": "run-s check:*",
+    "test": "playwright test"
+  }
+}
