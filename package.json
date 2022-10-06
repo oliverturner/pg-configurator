@@ -20,6 +20,7 @@
     "dev:api": "npx arc sandbox",
     "dev:app": "npm run dev -w app",
     "build:app": "npm run build -w app",
-    "deploy": "npx arc deploy"
+    "predeploy": "npm run build:app",
+    "deploy": "npx arc deploy --static --prune"
   }
 }
