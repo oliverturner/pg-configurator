@@ -7,7 +7,8 @@
   // Result of the `load` function in `./+page.ts`
   export let data: PageData = {};
 
-  const { slots, page } = data;
+  $: page = data.page;
+  $: slots = data.slots;
 </script>
 
 <div class="container">

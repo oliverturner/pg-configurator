@@ -4,7 +4,7 @@
   import "../app.css";
 
   // Result of the `load` function in `./+layout.ts`
-  export let data: LayoutData = {};
+  export let data: LayoutData = { apps: [] };
 
   // Enforce SPA mode
   export const ssr = false;
@@ -16,7 +16,7 @@
   </header>
   <nav class="app__nav">
     <ul>
-      {#each Object.values(data) as app}
+      {#each data.apps as app}
         <li>
           <a href="/app/{app.dataID}">{app.label}</a>
         </li>
