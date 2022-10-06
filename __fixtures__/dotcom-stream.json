@@ -1,4 +1,7 @@
 {
+  "scopeID": "2c27fe83-1e6f-4415-9333-2dc60f0e0bed",
+  "dataID": "069c8572-2282-4711-b8e5-f18424193651",
+  "label": "dotcom-stream",
   "page": {
     "lazyLoad": {
       "fetchMarginPercent": 500,
