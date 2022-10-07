@@ -51,7 +51,7 @@
     },
     "o-ads-slot-1813": {
       "targeting": {
-        "pos": "top;"
+        "pos": "top"
       },
       "adunit": "/5887/test.5887.origami",
       "sizes": [
@@ -68,14 +68,15 @@
     },
     "PartnerContent--horizontal": {
       "targeting": {
-        "pos": "native;format=horizontal"
+        "pos": "native",
+        "format": "horizontal"
       },
       "adunit": "/5887/test.5887.origami",
       "sizes": [[[0, 0], ["fluid"]]]
     },
     "o-ads-slot-6660": {
       "targeting": {
-        "pos": "mid;"
+        "pos": "mid"
       },
       "adunit": "/5887/test.5887.origami",
       "sizes": [
@@ -92,7 +93,7 @@
     },
     "o-ads-slot-1052": {
       "targeting": {
-        "pos": "mid1;"
+        "pos": "mid1"
       },
       "adunit": "/5887/test.5887.origami",
       "sizes": [
@@ -109,7 +110,7 @@
     },
     "mid-non-responsive-large": {
       "targeting": {
-        "pos": "mid;"
+        "pos": "mid"
       },
       "adunit": "/5887/test.5887.origami",
       "sizes": [
@@ -126,7 +127,7 @@
     },
     "mid1-non-responsive-large": {
       "targeting": {
-        "pos": "mid1;"
+        "pos": "mid1"
       },
       "adunit": "/5887/test.5887.origami",
       "sizes": [
