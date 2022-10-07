@@ -34,6 +34,7 @@ export interface PageConfig {
 export interface SlotConfig {
 	formats: SlotFormats;
 	targeting: Targeting;
+	sizes: googletag.GeneralSize[];
 }
 export interface AppConfig {
 	adunit: string;

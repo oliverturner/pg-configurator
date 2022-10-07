@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { LayoutData } from "./$types";
 
+  import { page } from "$app/stores";
   import "../app.css";
 
   // Result of the `load` function in `./+layout.ts`
@@ -15,10 +16,15 @@
     <h1><a href="/">Ad Configurator</a></h1>
   </header>
   <nav class="app__nav">
-    <ul>
+    <ul class="app__nav__apps">
       {#each data.apps as app}
         <li>
-          <a href="/app/{app.dataID}">{app.label}</a>
+          <a
+            href="/app/{app.dataID}"
+            class="app__nav__link"
+            class:app__nav__link--active={$page.data.dataID === app.dataID}
+            >{app.label}</a
+          >
         </li>
       {:else}
         loading
@@ -46,14 +52,29 @@
   .app__header {
     grid-area: header;
 
-    padding: var(--step-1) var(--step-2);
+    padding: var(--step-1) var(--step-0);
+    color: var(--text-1);
   }
+
+
 
   .app__nav {
     grid-area: nav;
 
-    padding: 0 var(--step-2);
+    padding-right: 1px;
+    color: var(--text-4);
   }
+
+  .app__nav__link {
+      display: block;
+      padding: var(--step--1);
+
+      &:hover,
+      &.app__nav__link--active {
+        background-color: var(--surface-2);
+        color: var(--text-1);
+      }
+    }
 
   .app__content {
     grid-area: content;

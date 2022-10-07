@@ -10,19 +10,19 @@
     },
     "requestMode": "sra"
   },
-  "slots": {
-    "leaderboard": {
-      "targeting": {
-        "pos": "top"
-      },
-      "adunit": "/5887/test.5887.origami",
+  "slots": [
+    {
+      "id": "leaderboard",
+      "targeting": { "pos": "top" },
       "sizes": [
         [
           [1200, 800],
           [
             [970, 250],
-            [970, 90],
-            [970, 66],
+            [
+              [970, 90],
+              [970, 66]
+            ],
             [728, 90],
             [2, 2],
             [1, 1]
@@ -31,8 +31,10 @@
         [
           [1024, 768],
           [
-            [970, 90],
-            [970, 66],
+            [
+              [970, 90],
+              [970, 66]
+            ],
             [728, 90],
             [2, 2],
             [1, 1]
@@ -49,11 +51,9 @@
         [[0, 0], [[300, 250]]]
       ]
     },
-    "o-ads-slot-1813": {
-      "targeting": {
-        "pos": "top"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "o-ads-slot-1813",
+      "targeting": { "pos": "top" },
       "sizes": [
         [[1024, 768], [[]]],
         [
@@ -66,19 +66,14 @@
         ]
       ]
     },
-    "PartnerContent--horizontal": {
-      "targeting": {
-        "pos": "native",
-        "format": "horizontal"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "PartnerContent--horizontal",
+      "targeting": { "pos": "native", "format": "horizontal" },
       "sizes": [[[0, 0], ["fluid"]]]
     },
-    "o-ads-slot-6660": {
-      "targeting": {
-        "pos": "mid"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "o-ads-slot-6660",
+      "targeting": { "pos": "mid" },
       "sizes": [
         [[1024, 768], [[]]],
         [
@@ -91,11 +86,9 @@
         ]
       ]
     },
-    "o-ads-slot-1052": {
-      "targeting": {
-        "pos": "mid1"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "o-ads-slot-1052",
+      "targeting": { "pos": "mid1" },
       "sizes": [
         [[1024, 768], [[]]],
         [
@@ -108,11 +101,9 @@
         ]
       ]
     },
-    "mid-non-responsive-large": {
-      "targeting": {
-        "pos": "mid"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "mid-non-responsive-large",
+      "targeting": { "pos": "mid" },
       "sizes": [
         [
           [1024, 768],
@@ -125,11 +116,9 @@
         ]
       ]
     },
-    "mid1-non-responsive-large": {
-      "targeting": {
-        "pos": "mid1"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "mid1-non-responsive-large",
+      "targeting": { "pos": "mid1" },
       "sizes": [
         [
           [1024, 768],
@@ -142,5 +131,5 @@
         ]
       ]
     }
-  }
+  ]
 }

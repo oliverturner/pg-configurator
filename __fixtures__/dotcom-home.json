@@ -10,19 +10,19 @@
     },
     "requestMode": "sra"
   },
-  "slots": {
-    "top-desktop": {
-      "targeting": {
-        "pos": "top"
-      },
-      "adunit": "/5887/test.5887.origami",
+  "slots": [
+    {
+      "id": "top-desktop",
+      "targeting": { "pos": "top" },
       "sizes": [
         [[1200, 800], [[970, 250]]],
         [
           [1024, 768],
           [
-            [970, 90],
-            [970, 66]
+            [
+              [970, 90],
+              [970, 66]
+            ]
           ]
         ],
         [
@@ -35,18 +35,17 @@
         ]
       ]
     },
-    "high-impact": {
-      "targeting": {
-        "pos": "high-impact",
-        "mvt2": "true"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "high-impact",
+      "targeting": { "pos": "high-impact", "mvt2": "true" },
       "sizes": [
         [
           [1024, 768],
           [
-            [970, 90],
-            [970, 66]
+            [
+              [970, 90],
+              [970, 66]
+            ]
           ]
         ],
         [[768, 690], [[728, 90]]],
@@ -60,17 +59,17 @@
         ]
       ]
     },
-    "mid-desktop": {
-      "targeting": {
-        "pos": "mid"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "mid-desktop",
+      "targeting": { "pos": "mid" },
       "sizes": [
         [
           [1024, 768],
           [
-            [970, 90],
-            [970, 66]
+            [
+              [970, 90],
+              [970, 66]
+            ]
           ]
         ],
         [
@@ -83,11 +82,9 @@
         ]
       ]
     },
-    "top-mobile": {
-      "targeting": {
-        "pos": "top"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "top-mobile",
+      "targeting": { "pos": "top" },
       "sizes": [
         [[768, 690], []],
         [
@@ -100,11 +97,9 @@
         ]
       ]
     },
-    "mid-mobile": {
-      "targeting": {
-        "pos": "mid"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "mid-mobile",
+      "targeting": { "pos": "mid" },
       "sizes": [
         [[768, 690], []],
         [
@@ -117,11 +112,9 @@
         ]
       ]
     },
-    "mid1": {
-      "targeting": {
-        "pos": "mid1"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "mid1",
+      "targeting": { "pos": "mid1" },
       "sizes": [
         [
           [320, 50],
@@ -132,14 +125,14 @@
         ]
       ]
     },
-    "native-teaser": {
+    {
+      "id": "native-teaser",
       "targeting": {
         "pos": "PartnerContent",
         "format": "stacked",
         "layout": "card"
       },
-      "adunit": "/5887/test.5887.origami",
       "sizes": [[[0, 0], ["fluid"]]]
     }
-  }
+  ]
 }

@@ -23,18 +23,20 @@
 	dialog {
 		width: 550px;
 		padding: 0;
-		border-radius: 0;
-		background-color: var(--surface-1);
+		border: none;
 		clip-path: var(--clip-notched);
+		background-color: var(--surface-1);
+		color: inherit;
 	}
 
 	header {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
 
 		padding: var(--step--1);
-		border-bottom: 1px solid var(--surface-2);
+		border-bottom: 1px solid var(--surface-3);
 	}
 
 	.content {

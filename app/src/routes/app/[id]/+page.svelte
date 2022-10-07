@@ -14,8 +14,8 @@
 <div class="container">
   <Page {page} />
   <div class="slots">
-    {#each [...slots.keys()] as id}
-      <Slot {id} config={slots.get(id)} />
+    {#each slots as slot}
+      <Slot id={slot.id} {slot} />
     {:else}
       loading
     {/each}
@@ -39,6 +39,6 @@
     align-content: start;
     gap: 1rem;
 
-    overflow: auto;
+    overflow: hidden auto;
   }
 </style>

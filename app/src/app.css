@@ -1,8 +1,8 @@
 :root {
   --text-1: lch(85% 0 0);
-  --text-2: lch(80% 0 0);
-  --text-3: lch(75% 0 0);
-  --text-4: lch(70% 0 0);
+  --text-2: lch(75% 0 0);
+  --text-3: lch(65% 0 0);
+  --text-4: lch(55% 0 0);
 
   --surface-1: lch(10% 0 0);
   --surface-2: lch(15% 0 0);
@@ -56,10 +56,11 @@
 }
 
 body {
+  margin: 0;
   font-family: var(--font-sans);
   font-size: var(--step-0);
   background-color: var(--surface-1);
-  color: var(--text-1);
+  color: var(--text-3);
 }
 
 h1 {
@@ -102,7 +103,6 @@ fieldset {
 
 dl {
   display: grid;
-  width: max-content;
   grid-template-columns: max-content 1fr;
   align-content: center;
   gap: 0.5rem;

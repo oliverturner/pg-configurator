@@ -5,6 +5,7 @@
   "devDependencies": {
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
+    "@types/googletag": "^2.2.5",
     "eslint-plugin-svelte3": "^4.0.0",
     "open-props": "1.4.16",
     "postcss": "^8.4.17",

@@ -13,9 +13,6 @@ spa true
 @http
 get /v1/apps
 get /v1/apps/:dataID
-/app/*
-  method get
-  src app/build/
 
 @tables
 data

@@ -10,19 +10,19 @@
     },
     "requestMode": "sra"
   },
-  "slots": {
-    "leaderboard": {
-      "targeting": {
-        "pos": "top"
-      },
-      "adunit": "/5887/test.5887.origami",
+  "slots": [
+    {
+      "id": "leaderboard",
+      "targeting": { "pos": "top" },
       "sizes": [
         [
           [1200, 800],
           [
             [970, 250],
-            [970, 90],
-            [970, 66],
+            [
+              [970, 90],
+              [970, 66]
+            ],
             [728, 90],
             [2, 2],
             [1, 1]
@@ -31,8 +31,10 @@
         [
           [1024, 768],
           [
-            [970, 90],
-            [970, 66],
+            [
+              [970, 90],
+              [970, 66]
+            ],
             [728, 90],
             [2, 2],
             [1, 1]
@@ -49,11 +51,9 @@
         [[0, 0], [[300, 250]]]
       ]
     },
-    "mpu": {
-      "targeting": {
-        "pos": "mid"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "mpu",
+      "targeting": { "pos": "mid" },
       "sizes": [
         [[1024, 768], [[]]],
         [
@@ -74,11 +74,9 @@
         ]
       ]
     },
-    "mpu1": {
-      "targeting": {
-        "pos": "mid1"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "mpu1",
+      "targeting": { "pos": "mid1" },
       "sizes": [
         [[1024, 768], [[]]],
         [
@@ -99,11 +97,9 @@
         ]
       ]
     },
-    "mpu3": {
-      "targeting": {
-        "pos": "mid3"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "mpu3",
+      "targeting": { "pos": "mid3" },
       "sizes": [
         [[768, 690], [[]]],
         [
@@ -116,11 +112,9 @@
         ]
       ]
     },
-    "third-mpu": {
-      "targeting": {
-        "pos": "mid2"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "third-mpu",
+      "targeting": { "pos": "mid2" },
       "sizes": [
         [[1024, 768], [[]]],
         [
@@ -133,29 +127,27 @@
         ]
       ]
     },
-    "native-ad__fullwidth": {
+    {
+      "id": "native-ad__fullwidth",
       "targeting": {
         "pos": "native",
         "format": "stacked",
         "appname": "article"
       },
-      "adunit": "/5887/test.5887.origami",
       "sizes": [[[0, 0], ["fluid"]]]
     },
-    "native_onward_journey": {
+    {
+      "id": "native_onward_journey",
       "targeting": {
         "pos": "native",
         "format": "stacked",
         "appname": "article"
       },
-      "adunit": "/5887/test.5887.origami",
       "sizes": [[[0, 0], ["fluid"]]]
     },
-    "right-hand-rail": {
-      "targeting": {
-        "pos": "mid"
-      },
-      "adunit": "/5887/test.5887.origami",
+    {
+      "id": "right-hand-rail",
+      "targeting": { "pos": "mid" },
       "sizes": [
         [
           [1024, 768],
@@ -168,5 +160,5 @@
         ]
       ]
     }
-  }
+  ]
 }

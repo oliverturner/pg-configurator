@@ -24,6 +24,6 @@
     "dev:app": "npm run dev -w app",
     "build:app": "npm run build -w app",
     "predeploy": "npm run build:app",
-    "deploy": "npx arc deploy --static --prune"
+    "deploy": "npx arc deploy"
   }
 }
