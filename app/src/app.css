@@ -1,3 +1,9 @@
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
 :root {
   --text-1: lch(85% 0 0);
   --text-2: lch(75% 0 0);
@@ -34,9 +40,8 @@
   );
 }
 
-:where(h1, h2, h3, h4) {
-	margin: 0;
-  font-size: var(--step-0);
+:where(h1, h2, h3, h4, .label) {
+  margin: 0;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -48,7 +53,7 @@
 }
 
 :where(dl, dt, dd) {
-	margin: 0;
+  margin: 0;
 }
 
 :where(p, ul, ol, dl, h6) {
@@ -73,7 +78,7 @@ h2 {
   letter-spacing: 2px;
 }
 
-h3 {
+h3, .label {
   font-size: var(--step--1);
   letter-spacing: 1px;
 }
@@ -142,4 +147,8 @@ dt {
 a[href] {
   color: inherit;
   text-decoration: none;
+}
+
+.notched {
+  clip-path: var(--clip-notched);
 }

@@ -6,7 +6,10 @@
 
 <div>
   {#each formats as format}
-    <span>{format}</span>
+    <span class:hidden={format === "hidden"}>{format}</span>
+  {:else}
+    <!-- couldn't map the size to a known format  -->
+    <span class="unknown">unknown</span>
   {/each}
 </div>
 
@@ -24,5 +27,14 @@
     font-size: 0.9rem;
     font-family: "Courier New", Courier, monospace;
     color: var(--orange-4);
+
+    &.hidden {
+      color: var(--text-2);
+      border-style: dotted;
+    }
+
+    &.unknown {
+      color: var(--red-5);
+    }
   }
 </style>

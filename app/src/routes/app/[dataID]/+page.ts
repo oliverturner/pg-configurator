@@ -34,7 +34,11 @@ function injectFormats(data: any) {
 
 export const load: PageLoad = async ({ fetch, params }) => {
   const host = dev ? "http://localhost:3333" : "";
-  const res = await fetch(`${host}/v1/apps/${params.id}`);
+  const url = `${host}/v1/apps/${params.dataID}`;
+
+  console.log({ url });
+
+  const res = await fetch(url);
   const data = await res.json();
 
   injectFormats(data);

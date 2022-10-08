@@ -29,7 +29,7 @@ export const FORMATS = {
   ],
   Billboard: [970, 250],
   PartnerContent: "fluid",
-  false: "",
+  hidden: "",
 } as const;
 
 // Derived values

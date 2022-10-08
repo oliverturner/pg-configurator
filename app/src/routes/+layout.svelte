@@ -1,14 +1,20 @@
 <script lang="ts">
   import type { LayoutData } from "./$types";
 
-  import { page } from "$app/stores";
+  import { fly } from "svelte/transition";
   import "../app.css";
-
-  // Result of the `load` function in `./+layout.ts`
-  export let data: LayoutData = { apps: [] };
 
   // Enforce SPA mode
   export const ssr = false;
+
+  // Result of the `load` function in `./+layout.ts`
+  export let data: LayoutData;
+
+  const duration = 500;
+  const flyProps = {
+    in: { duration, delay: duration * 2 },
+    out: { duration },
+  };
 </script>
 
 <div class="app">
@@ -22,7 +28,7 @@
           <a
             href="/app/{app.dataID}"
             class="app__nav__link"
-            class:app__nav__link--active={$page.data.dataID === app.dataID}
+            class:app__nav__link--active={data.currentAppId === app.dataID}
             >{app.label}</a
           >
         </li>
@@ -31,9 +37,11 @@
       {/each}
     </ul>
   </nav>
-  <main class="app__content">
-    <slot />
-  </main>
+  {#key data.currentPath}
+    <main class="app__content" in:fly={flyProps.in} out:fly={flyProps.out}>
+      <slot />
+    </main>
+  {/key}
 </div>
 
 <style lang="postcss">
@@ -47,6 +55,9 @@
 
     height: 100vh;
     overflow: hidden;
+
+    opacity: 0;
+    animation: fade-in 0.5s ease-in-out forwards;
   }
 
   .app__header {
@@ -56,8 +67,6 @@
     color: var(--text-1);
   }
 
-
-
   .app__nav {
     grid-area: nav;
 
@@ -66,15 +75,15 @@
   }
 
   .app__nav__link {
-      display: block;
-      padding: var(--step--1);
+    display: block;
+    padding: var(--step--1);
 
-      &:hover,
-      &.app__nav__link--active {
-        background-color: var(--surface-2);
-        color: var(--text-1);
-      }
+    &:hover,
+    &.app__nav__link--active {
+      background-color: var(--surface-2);
+      color: var(--text-1);
     }
+  }
 
   .app__content {
     grid-area: content;

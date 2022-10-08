@@ -15,4 +15,8 @@
     display: grid;
     gap: var(--step--2);
   }
+
+  label {
+    color: var(--text-3);
+  }
 </style>

@@ -53,7 +53,7 @@
           name="requestMode"
           checked={page.requestMode === "sra"}
         />
-        <label for="requestMode">Enable SRA</label>
+        <label class="label" for="requestMode">Enable SRA</label>
       </div>
     </fieldset>
   </div>

@@ -5,10 +5,10 @@
   import Slot from "$lib/components/slot.svelte";
 
   // Result of the `load` function in `./+page.ts`
-  export let data: PageData = {};
+  export let data: PageData;
 
-  $: page = data.page;
-  $: slots = data.slots;
+  $: page = data?.page;
+  $: slots = data?.slots;
 </script>
 
 <div class="container">
@@ -24,11 +24,13 @@
 
 <style lang="postcss">
   .container {
+    --spacing: var(--step-0);
+
     display: flex;
-    gap: 1rem;
+    gap: var(--spacing);
 
     height: 100%;
-    padding: 0 1rem 1rem 0;
+    padding: 0 var(--spacing) var(--spacing) 0;
   }
 
   .slots {
@@ -37,8 +39,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     align-content: start;
-    gap: 1rem;
+    gap: var(--spacing);
 
     overflow: hidden auto;
+    padding-bottom: var(--spacing);
   }
 </style>
