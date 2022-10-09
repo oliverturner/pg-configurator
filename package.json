@@ -12,18 +12,22 @@
     "app"
   ],
   "devDependencies": {
-    "@architect/architect": "10.7.0"
+    "@architect/architect": "10.7.0",
+    "npm-run-all": "4.1.5"
   },
   "dependencies": {
-    "@architect/functions": "5.2.2",
-    "@begin/data": "4.0.1"
+    "@architect/functions": "5.2.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:api": "npx arc sandbox",
     "dev:app": "npm run dev -w app",
     "build:app": "npm run build -w app",
-    "predeploy": "npm run build:app",
-    "deploy": "npx arc deploy"
+    "deploy:clean": "rm -rf ./public",
+    "deploy:build": "npm run build:app",
+    "deploy:move": "mv ./app/build ./public",
+    "deploy:infra": "npx arc deploy",
+    "deploy": "run-s deploy:*",
+    "prod": "npx arc deploy --production"
   }
 }

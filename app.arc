@@ -6,17 +6,15 @@ pg-configurator
 region us-west-2
 runtime nodejs16.x
 
-@shared
-
-@static
-folder app/build
-spa true
-
 @http
 get  /v1/apps
 get  /v1/apps/:dataID
 # put  /v1/apps/:dataID
 # post /v1/apps/:dataID
+
+@static
+prune true
+spa true
 
 @tables
 data
