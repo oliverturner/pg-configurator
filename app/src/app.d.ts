@@ -13,14 +13,12 @@ declare namespace App {
   // interface Stuff {}
 }
 
-type Targeting = Record<string, string>;
 type SlotSize = keyof typeof RESOLUTIONS;
 type IABFormat = keyof typeof FORMATS;
 type SlotFormats = Record<SlotSize, IABFormat[]>;
 
 export interface PageConfig {
   requestMode: "sra" | "lazy";
-  targeting: Targeting;
   lazyLoad: {
     fetchMarginPercent: number;
     renderMarginPercent: number;
@@ -32,8 +30,13 @@ export interface SlotConfig {
   targeting: Targeting;
   sizes: googletag.GeneralSize[];
 }
+
+export interface AppLink {
+  dataID: string;
+  label: string;
+}
+
 export interface AppConfig {
-  adunit: string;
   page: PageConfig;
   slots: Record<string, SlotConfig>;
 }
