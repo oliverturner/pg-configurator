@@ -6,10 +6,8 @@ pg-configurator
 region us-west-2
 runtime nodejs16.x
 
-@shared
-
 @static
-folder app/build
+prune true
 spa true
 
 @http
