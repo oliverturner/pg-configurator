@@ -3,8 +3,6 @@ import type { PageLoad } from "./$types";
 import { dev } from "$app/environment";
 import { RESOLUTION_DICT, FORMAT_DICT } from "$lib/constants/dimensions";
 
-console.log({ FORMAT_DICT });
-
 function injectFormats(data: any) {
   for (const slot of data.slots) {
     const formats: Record<string, string[]> = {};
@@ -34,7 +32,7 @@ function injectFormats(data: any) {
 
 export const load: PageLoad = async ({ fetch, params }) => {
   const host = dev ? "http://localhost:3333" : "";
-  const url = `${host}/v1/apps/${params.dataID}`;
+  const url = `${host}/api/v1/apps/${params.dataID}`;
 
   console.log({ url });
 
