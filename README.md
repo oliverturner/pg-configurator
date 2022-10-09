@@ -19,31 +19,15 @@ graph TD
     aws.api[Lambda API]
   end
 
-  app((Configurator))
+  fastlyApp[pg.ft.com/app]
 
-  f.app[pg.ft.com/app]
+  fastlyApi[pg.ft.com/api/:appId]
 
-  f.api[pg.ft.com/api]
+  aws.s3 --> app --> fastlyApp
 
-  aws.s3 --> app --> f.app
+  aws.api --> fastlyApi
 
-  app
-    -- POST/PUT --> aws.api
-    -- write    --> aws.db
-    -- read     --> aws.api
-    -- GET      --> app
-
-  aws.api --> f.api --> E
-
-  subgraph FT.com
-    E[App Adapter]
-    F1[Slot]
-    F2[Slot]
-    F3[Slot]
-    F4[Slot]
-
-    E --> F1 & F2 & F3 & F4
-  end
+  app((Configurator)) -- POST/PUT --> aws.api -- write --> aws.db -- read --> aws.api -- GET --> app
 ```
 
 ## Development
