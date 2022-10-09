@@ -1,16 +1,14 @@
 @app
 pg-configurator
 
-# TODO: destroy this app: 1. use /api namespace; 2. recreate in eu-west-1
 @aws
-region us-west-2
-runtime nodejs16.x
+region eu-west-2
 
 @http
-get  /v1/apps
-get  /v1/apps/:dataID
-# put  /v1/apps/:dataID
-# post /v1/apps/:dataID
+get  /api/v1/apps
+get  /api/v1/apps/:dataID
+# put  /api/v1/apps/:dataID
+# post /api/v1/apps/:dataID
 
 @static
 prune true
