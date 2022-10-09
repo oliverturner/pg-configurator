@@ -23,6 +23,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:syntax": "eslint .",
+    "lint:format": "prettier --check .",
     "dev:api": "npx arc sandbox",
     "dev:app": "npm run dev -w app",
     "build:app": "npm run build -w app",

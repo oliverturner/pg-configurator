@@ -1,12 +1,12 @@
 <div class="page">
-  <p>Select an app to configure</p>
+	<p>Select an app to configure</p>
 </div>
 
 <style>
-  .page {
-    display: grid;
-    place-content: center;
+	.page {
+		display: grid;
+		place-content: center;
 
-    height: 100%;
-  }
+		height: 100%;
+	}
 </style>
