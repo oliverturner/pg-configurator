@@ -1,6 +1,9 @@
 import arc from "@architect/functions";
 
-async function getTable() {
+/**
+ * @returns { Promise<{ cors: true; json: any[]; }>}
+ */
+async function getApps() {
   const { data } = await arc.tables();
   const { Items } = await data.scan({
     AttributesToGet: ["label", "dataID"],
@@ -12,4 +15,4 @@ async function getTable() {
   };
 }
 
-export const handler = arc.http.async(getTable);
+export const handler = arc.http.async(getApps);

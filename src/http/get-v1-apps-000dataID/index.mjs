@@ -1,18 +1,23 @@
+/**
+ * @typedef {import("@architect/functions/types/http").HttpRequest} HttpRequest
+ */
+
 import arc from "@architect/functions";
 
-const scopeID = "2c27fe83-1e6f-4415-9333-2dc60f0e0bed";
-const regExp = new RegExp(/^[a-zA-Z0-9-]{36}$/);
+import { validateUuid } from "@architect/shared/validate.mjs";
+import { DYNAMO_DB } from "@architect/shared/constants.mjs";
 
-function validateParams({ dataID }) {
-  return dataID.match(regExp) ? dataID : false;
-}
-
-async function getTable(request) {
-  const dataID = validateParams(request.params);
-
-  if (dataID === false) {
-    throw new Error("Invalid dataID");
-  }
+/**
+ * @param {HttpRequest} request
+ * @returns {Promise<{
+ *   ok: boolean;
+ *   cors: true;
+ *   json: any;
+ * }>}
+ */
+async function getApp(request) {
+  const dataID = validateUuid(request.pathParameters.dataID);
+  const { scopeID } = DYNAMO_DB;
 
   const tables = await arc.tables();
   const json = await tables.data.get({ scopeID, dataID });
@@ -24,4 +29,4 @@ async function getTable(request) {
   };
 }
 
-export const handler = arc.http.async(getTable);
+export const handler = arc.http.async(getApp);
