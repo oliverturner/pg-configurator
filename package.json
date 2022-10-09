@@ -25,7 +25,9 @@
     "build:app": "npm run build -w app",
     "deploy:clean": "rm -rf ./public",
     "deploy:build": "npm run build:app",
-    "deploy:copy": "mv ./app/build ./public",
-    "deploy": "run-s deploy:*"
+    "deploy:move": "mv ./app/build ./public",
+    "deploy:infra": "npx arc deploy",
+    "deploy": "run-s deploy:*",
+    "prod": "npx arc deploy --production"
   }
 }
