@@ -14,6 +14,7 @@
 	--surface-2: lch(15% 0 0);
 	--surface-3: lch(20% 0 0);
 	--surface-4: lch(25% 0 0);
+	--surface-5: lch(30% 0 0);
 
 	/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1140,16,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 	--step--2: clamp(0.64rem, calc(0.72rem + -0.11vw), 0.69rem);
@@ -40,10 +41,68 @@
 	);
 }
 
+/* Source: https://github.com/argyleink/open-props/blob/main/src/extra/normalize.css */
+:where(input, button, textarea, select),
+:where(input[type="file"])::-webkit-file-upload-button {
+	font: inherit;
+	font-size: inherit;
+	color: inherit;
+	letter-spacing: inherit;
+}
+
+:where(input, textarea) {
+	padding-inline: var(--size-2);
+	padding-block: var(--size-1);
+}
+
+:where(select) {
+	padding-inline: 1.25ch 0;
+	padding-block: 0.75ch;
+}
+
+:where(textarea, select, input:not(button, button[type], input[type="button"], input[type="submit"], input[type="reset"])) {
+	border-radius: var(--radius-2);
+	border: 1px solid var(--surface-5);
+	background-color: hsl(210deg 11% 10%);
+}
+
+:where(textarea) {
+	resize: block;
+}
+
+:where(input[type="checkbox"], input[type="radio"]) {
+	block-size: var(--size-3);
+	inline-size: var(--size-3);
+}
+
+/* Custom styles */
+body {
+	margin: 0;
+	font-family: var(--font-sans);
+	font-size: var(--step-0);
+	background-color: var(--surface-1);
+	color: var(--text-3);
+}
+
 :where(h1, h2, h3, h4, .label) {
 	margin: 0;
 	font-weight: normal;
 	text-transform: uppercase;
+}
+
+:where(h1) {
+	font-size: var(--step-1);
+	letter-spacing: 3px;
+}
+
+:where(h2) {
+	font-size: var(--step-0);
+	letter-spacing: 2px;
+}
+
+:where(h3, .label) {
+	font-size: var(--step--1);
+	letter-spacing: 1px;
 }
 
 :where(ol, ul)[class] {
@@ -60,31 +119,7 @@
 	font-size: inherit;
 }
 
-body {
-	margin: 0;
-	font-family: var(--font-sans);
-	font-size: var(--step-0);
-	background-color: var(--surface-1);
-	color: var(--text-3);
-}
-
-h1 {
-	font-size: var(--step-1);
-	letter-spacing: 3px;
-}
-
-h2 {
-	font-size: var(--step-0);
-	letter-spacing: 2px;
-}
-
-h3,
-.label {
-	font-size: var(--step--1);
-	letter-spacing: 1px;
-}
-
-dialog {
+:where(dialog) {
 	&::backdrop {
 		backdrop-filter: initial;
 		backdrop-filter: blur(5px);
@@ -92,12 +127,12 @@ dialog {
 	}
 }
 
-button {
+:where(button) {
 	all: unset;
 	cursor: pointer;
 }
 
-fieldset {
+:where(fieldset) {
 	all: unset;
 
 	display: grid;
@@ -107,7 +142,7 @@ fieldset {
 	font-size: inherit;
 }
 
-dl {
+:where(dl) {
 	display: grid;
 	grid-template-columns: max-content 1fr;
 	align-content: center;
@@ -116,7 +151,14 @@ dl {
 	padding: 0 0 0 1rem;
 }
 
-dt {
+:where(dt, dd) {
+	display: flex;
+	align-items: center;
+}
+
+:where(dt) {
+	justify-content: end;
+
 	margin: 0;
 	font-weight: normal;
 	color: inherit;
@@ -124,17 +166,6 @@ dt {
 	&::after {
 		content: ":";
 	}
-}
-
-dt,
-dd {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-dt {
-	justify-content: end;
 
 	& button {
 		margin-right: 0.5rem;
@@ -145,11 +176,15 @@ dt {
 	}
 }
 
-a[href] {
+:where(dd) {
+	justify-content: space-between;
+}
+
+:where(a[href]) {
 	color: inherit;
 	text-decoration: none;
 }
 
-.notched {
+:where(.notched) {
 	clip-path: var(--clip-notched);
 }
