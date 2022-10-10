@@ -16,17 +16,17 @@ import { DYNAMO_DB } from "@architect/shared/constants.mjs";
  * }>}
  */
 async function getApp(request) {
-  const dataID = validateUuid(request.pathParameters.dataID);
-  const { scopeID } = DYNAMO_DB;
+	const dataID = validateUuid(request.pathParameters.dataID);
+	const { scopeID } = DYNAMO_DB;
 
-  const tables = await arc.tables();
-  const json = await tables.data.get({ scopeID, dataID });
+	const tables = await arc.tables();
+	const json = await tables.data.get({ scopeID, dataID });
 
-  return {
-    ok: true,
-    cors: true,
-    json,
-  };
+	return {
+		ok: true,
+		cors: true,
+		json,
+	};
 }
 
 export const handler = arc.http.async(getApp);

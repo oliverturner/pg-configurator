@@ -3,6 +3,7 @@
 ![docs/configurator-ui.png](docs/configurator-ui.png)
 
 ## Introduction
+
 An app to mange the configuration of Project Gwyneth-powered ads
 
 This PoC uses the [Architect](https://arc.codes) framework to scaffold resources

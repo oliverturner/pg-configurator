@@ -3,7 +3,9 @@ const shared = require("../.eslintrc.json");
 module.exports = {
 	...shared,
 	root: true,
-	plugins: [...shared.plugins, "svelte3"],
+	extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+	parser: "@typescript-eslint/parser",
+	plugins: ["filename-rules", "@typescript-eslint", "svelte3"],
 	ignorePatterns: ["*.cjs"],
 	overrides: [{ files: ["*.svelte"], processor: "svelte3/svelte3" }],
 	rules: {

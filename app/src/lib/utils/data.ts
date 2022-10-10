@@ -6,10 +6,10 @@
  * ```
  */
 export function invertObject(obj: Record<string, any>): Record<string, string> {
-  const dict: Record<string, string> = {};
-  for (const [key, value] of Object.entries(obj)) {
-    dict[String(value)] = key;
-  }
+	const dict: Record<string, string> = {};
+	for (const [key, value] of Object.entries(obj)) {
+		dict[String(value)] = key;
+	}
 
-  return dict;
+	return dict;
 }

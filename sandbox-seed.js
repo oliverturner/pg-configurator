@@ -3,5 +3,5 @@ const article = require("./__fixtures__/dotcom-article.json");
 const stream = require("./__fixtures__/dotcom-stream.json");
 
 module.exports = {
-  data: [home, article, stream],
+	data: [home, article, stream],
 };
