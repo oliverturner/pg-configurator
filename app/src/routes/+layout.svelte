@@ -64,17 +64,21 @@
 	}
 
 	.app__header {
-		grid-area: header;
-
 		padding: var(--step-1) var(--step-0);
 		color: var(--text-1);
+
+		@media (min-width: 768px) {
+			grid-area: header;
+		}
 	}
 
 	.app__nav {
-		grid-area: nav;
-
 		padding-right: 1px;
 		color: var(--text-4);
+
+		@media (min-width: 768px) {
+			grid-area: nav;
+		}
 	}
 
 	.app__nav__link {
@@ -89,9 +93,8 @@
 	}
 
 	.app__content {
-		grid-area: content;
-
 		@media (min-width: 768px) {
+			grid-area: content;
 			overflow: hidden scroll;
 		}
 
