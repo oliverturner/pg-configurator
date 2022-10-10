@@ -28,11 +28,17 @@
 	.container {
 		--spacing: var(--step-0);
 
-		display: flex;
-		gap: var(--spacing);
-
-		height: 100%;
 		padding: 0 var(--spacing) var(--spacing) 0;
+
+		@media (min-width: 768px) {
+			/* ? */
+		}
+
+		@media (min-width: 980px) {
+			gap: var(--spacing);
+			height: 100%;
+			display: flex;
+		}
 	}
 
 	.slots {
@@ -43,7 +49,9 @@
 		align-content: start;
 		gap: var(--spacing);
 
-		overflow: hidden auto;
-		padding-bottom: var(--spacing);
+		@media (min-width: 980px) {
+			overflow: hidden auto;
+			padding-bottom: var(--spacing);
+		}
 	}
 </style>
