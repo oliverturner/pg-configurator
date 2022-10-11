@@ -4,14 +4,10 @@
 	import Input from "$lib/components/input.svelte";
 
 	export let page: PageConfig;
+	export let onPageChange: (event: Event) => void;
 	export const slots: Record<string, SlotConfig> = {};
 
 	let thresholds: Record<string, any>;
-
-	function onChange(event: Event) {
-		const data = new FormData(event.currentTarget as HTMLFormElement);
-		console.log("onChange", Object.fromEntries(data));
-	}
 
 	$: lazyLoad = page.lazyLoad;
 	$: thresholds = {
@@ -42,7 +38,7 @@
 	};
 </script>
 
-<form class="page" on:change={onChange}>
+<form class="page" on:change={onPageChange}>
 	<div>
 		<h2>Page</h2>
 		<fieldset>

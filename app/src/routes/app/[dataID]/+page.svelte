@@ -7,12 +7,17 @@
 	// Result of the `load` function in `./+page.ts`
 	export let data: PageData;
 
+	function onPageChange(event: Event) {
+		const data = new FormData(event.currentTarget as HTMLFormElement);
+		console.log("onPageChange", Object.fromEntries(data));
+	}
+
 	$: page = data?.page;
 	$: slots = data?.slots;
 </script>
 
 <div class="container">
-	<Page {page} />
+	<Page {page} {onPageChange} />
 	<div class="slots">
 		{#each slots as slot}
 			<Slot id={slot.id} {slot} />
