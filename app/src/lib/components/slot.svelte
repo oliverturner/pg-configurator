@@ -7,7 +7,6 @@
 	import IconButton from "./icon-button.svelte";
 
 	export let slot: SlotConfig | undefined;
-	export let id: string;
 
 	let dialog: HTMLDialogElement;
 
@@ -23,6 +22,8 @@
 		dialog.close();
 	}
 
+	// TODO: Add control to hide slot
+	$: id = slot?.id;
 	$: formats = new Map(Object.entries(slot?.formats || {}));
 	$: targeting = new Map(Object.entries(slot?.targeting || {}));
 </script>

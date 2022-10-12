@@ -5,7 +5,10 @@ import type { FORMATS, RESOLUTIONS } from "$lib/constants/dimensions";
 
 // and what to do when importing types
 declare namespace App {
-	// interface Locals {}
+	interface Locals {
+		appConfig: AppConfig;
+		appEndpoint: string;
+	}
 	// interface Platform {}
 	// interface PrivateEnv {}
 	// interface PublicEnv {}
@@ -17,18 +20,25 @@ type SlotSize = keyof typeof RESOLUTIONS;
 type IABFormat = keyof typeof FORMATS;
 type SlotFormats = Record<SlotSize, IABFormat[]>;
 
+export type PageRequestMode = "sra" | "lazy";
+export type PageLoadConfig = {
+	fetchMarginPercent: number;
+	renderMarginPercent: number;
+	mobileScaling: number;
+};
+
 export interface PageConfig {
-	requestMode: "sra" | "lazy";
-	lazyLoad: {
-		fetchMarginPercent: number;
-		renderMarginPercent: number;
-		mobileScaling: number;
-	};
+	requestMode: PageRequestMode;
+	lazyLoad: PageLoadConfig;
 }
-export interface SlotConfig {
-	formats: SlotFormats;
+
+export interface SlotConfigRaw {
+	id: string;
 	targeting: Targeting;
-	sizes: googletag.GeneralSize[];
+	sizes: [[number, number], googletag.GeneralSize[]][];
+}
+export interface SlotConfig extends SlotConfigRaw {
+	formats: SlotFormats;
 }
 
 export interface AppLink {
@@ -37,6 +47,9 @@ export interface AppLink {
 }
 
 export interface AppConfig {
+	scopeID: string;
+	dataID: string;
+	label: string;
 	page: PageConfig;
-	slots: Record<string, SlotConfig>;
+	slots: SlotConfig[];
 }

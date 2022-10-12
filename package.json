@@ -13,17 +13,18 @@
   ],
   "devDependencies": {
     "@architect/architect": "10.7.0",
+    "@types/tape": "^4.13.2",
+    "aws-sdk": "^2.1231.0",
     "eslint": "8.25.0",
     "eslint-plugin-filename-rules": "1.2.0",
     "lefthook": "1.1.2",
     "npm-run-all": "4.1.5",
-    "prettier": "2.7.1"
-  },
-  "dependencies": {
-    "@architect/functions": "5.2.2"
+    "prettier": "2.7.1",
+    "tap-arc": "^0.3.5",
+    "tape": "^5.6.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tape src/**/*.test.{mjs,js} | tap-arc",
     "lint:syntax": "eslint .",
     "lint:format": "prettier --write .",
     "dev:api": "npx arc sandbox",
