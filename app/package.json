@@ -25,7 +25,6 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite dev",
-    "package": "svelte-kit package",
     "preview": "vite preview",
     "check:svelte:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "check:svelte": "svelte-check --tsconfig ./tsconfig.json",
