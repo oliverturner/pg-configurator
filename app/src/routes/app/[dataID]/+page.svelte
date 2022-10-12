@@ -3,24 +3,21 @@
 
 	import Page from "$lib/components/page.svelte";
 	import Slot from "$lib/components/slot.svelte";
+	import { pageChangeHandler } from "$lib/actions/app";
 
 	// Result of the `load` function in `./+page.ts`
 	export let data: PageData;
 
-	function onPageChange(event: Event) {
-		const data = new FormData(event.currentTarget as HTMLFormElement);
-		console.log("onPageChange", Object.fromEntries(data));
-	}
-
-	$: page = data?.page;
-	$: slots = data?.slots;
+	$: page = data?.appConfig.page;
+	$: slots = data?.appConfig.slots;
+	$: onPageChange = pageChangeHandler(data);
 </script>
 
 <div class="container">
 	<Page {page} {onPageChange} />
 	<div class="slots">
 		{#each slots as slot}
-			<Slot id={slot.id} {slot} />
+			<Slot {slot} />
 		{:else}
 			loading
 		{/each}

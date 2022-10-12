@@ -19,7 +19,6 @@ export async function updateApp(request) {
 	// TODO: validate request.body & test that violations are handled
 	// TODO: prevent upsert: require pre-existing dataID
 	const payload = JSON.parse(request.body);
-
 	const { scopeID } = DYNAMO_DB;
 
 	const tables = await arc.tables();
