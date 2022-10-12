@@ -55,8 +55,10 @@
 	</div>
 
 	<div>
+		<!-- TODO: make this a legend instead -->
 		<h3>Lazy loading</h3>
 		<fieldset>
+			<!-- <legend /> -->
 			{#each Object.keys(thresholds) as id}
 				<Input {id} {...thresholds[id]} />
 			{/each}
@@ -88,6 +90,10 @@
 		border-top: 1px solid var(--surface-1);
 		border-bottom: 1px solid var(--surface-1);
 		color: var(--gray-5);
+	}
+
+	h3 {
+		padding-left: var(--step-1);
 	}
 
 	fieldset {

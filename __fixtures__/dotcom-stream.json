@@ -6,7 +6,7 @@
     "lazyLoad": {
       "fetchMarginPercent": 500,
       "renderMarginPercent": 200,
-      "mobileScaling": 2.0
+      "mobileScaling": "2.0"
     },
     "requestMode": "sra"
   },
