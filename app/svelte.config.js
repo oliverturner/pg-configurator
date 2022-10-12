@@ -16,10 +16,9 @@ const config = {
 	}),
 
 	kit: {
-		adapter: adapter({
-			fallback: "index.html",
-		}),
+		adapter: adapter({ fallback: "index.html" }),
 		prerender: { entries: [] },
+		trailingSlash: "never",
 	},
 };
 

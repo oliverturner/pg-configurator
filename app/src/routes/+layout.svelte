@@ -10,6 +10,7 @@
 	// Result of the `load` function in `./+layout.ts`
 	export let data: LayoutData;
 
+	// Page transition props
 	const duration = 500;
 	const flyProps = {
 		in: { duration, delay: duration * 2 },
@@ -46,32 +47,38 @@
 
 <style lang="postcss">
 	.app {
-		display: grid;
-		grid-template-columns: 200px 1fr;
-		grid-template-rows: auto 1fr;
-		grid-template-areas:
-			"header header"
-			"nav content";
-
-		height: 100vh;
-		overflow: hidden;
-
 		opacity: 0;
 		animation: fade-in 0.5s ease-in-out forwards;
+
+		@media (min-width: 768px) {
+			display: grid;
+			grid-template-columns: 200px 1fr;
+			grid-template-rows: auto 1fr;
+			grid-template-areas:
+				"header header"
+				"nav content";
+
+			height: 100vh;
+			overflow: hidden;
+		}
 	}
 
 	.app__header {
-		grid-area: header;
-
 		padding: var(--step-1) var(--step-0);
 		color: var(--text-1);
+
+		@media (min-width: 768px) {
+			grid-area: header;
+		}
 	}
 
 	.app__nav {
-		grid-area: nav;
-
 		padding-right: 1px;
 		color: var(--text-4);
+
+		@media (min-width: 768px) {
+			grid-area: nav;
+		}
 	}
 
 	.app__nav__link {
@@ -86,9 +93,14 @@
 	}
 
 	.app__content {
-		grid-area: content;
+		@media (min-width: 768px) {
+			grid-area: content;
+			overflow: hidden scroll;
+		}
 
-		overflow: hidden;
+		@media (min-width: 980px) {
+			overflow: hidden;
+		}
 	}
 
 	h1 {

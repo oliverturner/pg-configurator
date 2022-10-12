@@ -28,22 +28,34 @@
 	.container {
 		--spacing: var(--step-0);
 
-		display: flex;
-		gap: var(--spacing);
+		@media (min-width: 768px) {
+			padding: 0 var(--spacing) var(--spacing) 0;
+		}
 
-		height: 100%;
-		padding: 0 var(--spacing) var(--spacing) 0;
+		@media (min-width: 980px) {
+			gap: var(--spacing);
+			height: 100%;
+			display: flex;
+		}
 	}
 
 	.slots {
 		flex: 1;
 
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-		align-content: start;
 		gap: var(--spacing);
 
-		overflow: hidden auto;
-		padding-bottom: var(--spacing);
+		padding: var(--spacing);
+
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+			align-content: start;
+
+			padding: 0;
+		}
+
+		@media (min-width: 980px) {
+			overflow: hidden auto;
+		}
 	}
 </style>
