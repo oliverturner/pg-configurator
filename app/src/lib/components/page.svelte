@@ -40,7 +40,7 @@
 
 <form class="page" on:change={onPageChange}>
 	<div>
-		<h2>Page</h2>
+		<h2>Page settings</h2>
 		<fieldset>
 			<div class="flex">
 				<input
@@ -55,7 +55,7 @@
 	</div>
 
 	<div>
-		<h2>Lazy loading</h2>
+		<h3>Lazy loading</h3>
 		<fieldset>
 			{#each Object.keys(thresholds) as id}
 				<Input {id} {...thresholds[id]} />
@@ -82,7 +82,8 @@
 		gap: var(--step-0);
 	}
 
-	h2 {
+	h2,
+	h3 {
 		padding: var(--step--1);
 		border-top: 1px solid var(--surface-1);
 		border-bottom: 1px solid var(--surface-1);

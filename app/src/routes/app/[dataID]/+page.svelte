@@ -14,8 +14,10 @@
 </script>
 
 <div class="container">
-	<Page {page} {onPageChange} />
-	<div class="slots">
+	<div class="container__page">
+		<Page {page} {onPageChange} />
+	</div>
+	<div class="container__slots">
 		{#each slots as slot}
 			<Slot {slot} />
 		{:else}
@@ -28,20 +30,20 @@
 	.container {
 		--spacing: var(--step-0);
 
-		@media (min-width: 768px) {
-			padding: 0 var(--spacing) var(--spacing) 0;
-		}
-
 		@media (min-width: 980px) {
-			gap: var(--spacing);
-			height: 100%;
 			display: flex;
+
+			height: 100%;
 		}
 	}
 
-	.slots {
-		flex: 1;
+	.container__page {
+		@media (min-width: 980px) {
+			flex: 0 0 200px;
+		}
+	}
 
+	.container__slots {
 		display: grid;
 		gap: var(--spacing);
 
@@ -50,11 +52,11 @@
 		@media (min-width: 768px) {
 			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 			align-content: start;
-
-			padding: 0;
 		}
 
 		@media (min-width: 980px) {
+			flex: 1;
+
 			overflow: hidden auto;
 		}
 	}

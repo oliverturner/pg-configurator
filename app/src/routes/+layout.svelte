@@ -65,6 +65,7 @@
 
 	.app__header {
 		padding: var(--step-1) var(--step-0);
+		background: var(--surface-1);
 		color: var(--text-1);
 
 		@media (min-width: 768px) {
@@ -75,6 +76,7 @@
 	.app__nav {
 		padding-right: 1px;
 		color: var(--text-4);
+		background: var(--surface-1);
 
 		@media (min-width: 768px) {
 			grid-area: nav;
@@ -93,6 +95,8 @@
 	}
 
 	.app__content {
+		background: var(--surface-0);
+
 		@media (min-width: 768px) {
 			grid-area: content;
 			overflow: hidden scroll;

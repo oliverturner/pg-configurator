@@ -10,6 +10,7 @@
 	--text-3: lch(65% 0 0);
 	--text-4: lch(55% 0 0);
 
+	--surface-0: lch(5% 0 0);
 	--surface-1: lch(10% 0 0);
 	--surface-2: lch(15% 0 0);
 	--surface-3: lch(20% 0 0);
@@ -63,7 +64,7 @@
 :where(textarea, select, input:not(button, button[type], input[type="button"], input[type="submit"], input[type="reset"])) {
 	border-radius: var(--radius-2);
 	border: 1px solid var(--surface-5);
-	background-color: hsl(210deg 11% 10%);
+	background-color: var(--surface-1);
 }
 
 :where(textarea) {
@@ -85,7 +86,7 @@ body {
 	margin: 0;
 	font-family: var(--font-sans);
 	font-size: var(--step-0);
-	background-color: var(--surface-1);
+	background: var(--surface-0);
 	color: var(--text-3);
 }
 

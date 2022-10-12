@@ -48,9 +48,11 @@
 			<dl>
 				{#each [...targeting.keys()] as targetKey}
 					<dt>
+						<!--
 						<IconButton icon="remove" onClick={() => removeTarget(targetKey)}>
 							Remove
 						</IconButton>
+						-->
 						<span>{targetKey}</span>
 					</dt>
 					<dd>
