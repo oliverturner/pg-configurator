@@ -11,9 +11,9 @@
 	export let data: LayoutData;
 
 	// Page transition props
-	const duration = 500;
+	const duration = 200;
 	const flyProps = {
-		in: { duration, delay: duration * 2 },
+		in: { duration, delay: duration * 1.5 },
 		out: { duration },
 	};
 </script>
