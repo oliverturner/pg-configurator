@@ -13,6 +13,7 @@
   ],
   "devDependencies": {
     "@architect/architect": "10.7.0",
+    "@architect/functions": "^5.2.3",
     "@types/tape": "^4.13.2",
     "aws-sdk": "^2.1231.0",
     "eslint": "8.25.0",
