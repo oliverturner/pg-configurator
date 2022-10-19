@@ -9,6 +9,7 @@ get     /api/v1/apps
 get     /api/v1/apps/:dataID
 put     /api/v1/apps/:dataID
 options /api/v1/apps/:dataID
+any     /*
 
 @static
 prune true

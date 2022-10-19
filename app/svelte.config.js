@@ -23,6 +23,12 @@ const config = {
 		prerender: { entries: [] },
 		trailingSlash: "always",
 	},
+
+	vitePlugin: {
+		experimental: {
+			inspector: true,
+		},
+	},
 };
 
 export default config;
