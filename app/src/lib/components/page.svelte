@@ -74,6 +74,7 @@
 
 		height: 100%;
 		overflow: hidden auto;
+		border: 1px solid var(--surface-0);
 		background-color: var(--surface-2);
 		color: var(--gray-4);
 	}
@@ -86,10 +87,15 @@
 
 	h2,
 	h3 {
+		--border: 1px solid var(--surface-1);
+
 		padding: var(--step--1);
-		border-top: 1px solid var(--surface-1);
-		border-bottom: 1px solid var(--surface-1);
+		border-bottom: var(--border);
 		color: var(--gray-5);
+	}
+
+	h3 {
+		border-top: var(--border);
 	}
 
 	h3 {
